@@ -40,16 +40,25 @@ const teamMembers = [
 // ***** DICHIARAZIONI ELEMENTI HTML E VARIABILI ***** 
 const container = document.querySelector(".card-container"); 
 
-
-// const firstElTry = { ...teamMembers[0] };
-// const container = document.querySelector(".card-container");
-
-// console.log(firstElTry);
-
-// container.innerHTML = `<div><figure><img src="${firstElTry.img}"><figcaption>${firstElTry.name} ${firstElTry.email}`;
-
+renderMembers(teamMembers, container);
 
 // **** FUNZIONI ****
+
+function renderMembers (objArray, htmlOutput)
+{
+  let cards = "";
+
+  for (let i = 0; i < objArray.length; i++) {
+    const member = objArray[i];
+    cards += addNewCard(member);
+  }
+  htmlOutput.innerHTML = cards;
+}
+
+
+
+
+
 
 function addNewCard (objElement){
   const card = `
@@ -62,3 +71,4 @@ function addNewCard (objElement){
 
   return card;
 }
+
