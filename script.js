@@ -62,10 +62,10 @@ function renderMembers (objArray, htmlOutput)
 
 function addNewCard (objElement){
   const card = `
-  <div> 
-    <figure>
-      <img src="${objElement.img}" alt="${objElement.name}">
-      <figcaption>${objElement.name} ${objElement.role} ${objElement.email}
+  <div class="col-3  bg-black p-0"> 
+    <figure class="d-flex col-6 mb-0">
+      <img src="${objElement.img}" alt="${objElement.name}" class="w-100">
+      <figcaption class="p-1"><h3 class="text-white">${objElement.name}</h3><h6 class="text-white">${objElement.role}</h6><h6 class="text-white"><a href="">${objElement.email}</a></h6>
     </figure>
   </div>` ;
 
